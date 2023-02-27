@@ -1,0 +1,21 @@
+nav .navbar-brand
+{
+    font-size: xx-large;
+}
+
+main .form-control
+{
+    display: inline-block;
+    width: 30%;
+}
+
+main
+{
+    overflow-x: auto;
+    text-align: center;
+}
+
+main .help
+{
+    text-align: left;
+}

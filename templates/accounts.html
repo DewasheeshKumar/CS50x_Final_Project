@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Accounts
+{% endblock %}
+
+{% block main %}
+
+    <div>
+        <p>
+            Funds
+            <table class = "table table-striped">
+                <tr>
+                    <th>Bank ID</th>
+                    <th>Bank</th>
+                    <th>Currency</th>
+                    <th>Balance</th>
+                    <th>Worth</th>
+                    <th>Status</th>
+                </tr>
+                {% for row in inventory %}
+                <tr>
+                    <td>{{ row.id }}</td>
+                    <td>{{ row.bank }}</td>
+                    <td>{{ row.currency }}</td>
+                    <td>{{ row.balance }}</td>
+                    <td>$ {{ row.worth }}</td>
+                    <td>{{ row.status }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+            
+            <b>TOTAL FUNDS WORTH : $ {{ total_worth }}</b>
+        </p>
+    </div>
+{% endblock %}

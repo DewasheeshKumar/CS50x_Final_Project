@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Transactions
+{% endblock %}
+
+{% block main %}
+
+    <div>
+        <p>
+            Transactions
+            <table class = "table table-striped">
+                <tr>
+                    <th>Transaction ID</th>
+                    <th>Title</th>
+                    <th>Amount</th>
+                    <th>Currency</th>
+                    <th>Bank</th>
+                    <th>Time</th>
+                </tr>
+                {% for row in data %}
+                <tr>
+                    <td>{{ row.id }}</td>
+                    <td>{{ row.title }}</td>
+                    <td>{{ row.amount }}</td>
+                    <td>{{ row.currency }}</td>
+                    <td>{{ row.bank }}</td>
+                    <td>{{ row.time }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </p>
+    </div>
+{% endblock %}

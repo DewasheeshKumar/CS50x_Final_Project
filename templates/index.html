@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block main %}
+
+    <div>
+        <p>
+            <b>User :</b> {{ username }}
+        </p>
+        <p>
+              Thank you for using myLedger to keep Track of your funds and spendings
+        </p>
+    </div>
+    
+    <div class="help">
+        <b>Help</b>
+        <ul>
+            <li>
+                Add Account: to add your bank account and it to your account list
+            </li>
+            <li>
+                Add Funds: to add the funds you recieve in an added account
+            </li>
+            <li>
+                Add Payments: to add the payements you made and from which account
+            </li>
+            <li>
+                Accounts: to view list of accounts you currently have listed
+            </li>
+            <li>
+                Transactions: to view list of payments done and funds recieved
+            </li>
+        </ul>
+        <ul>
+            <li>
+                Change Password: to change password of your account
+            </li>
+        </ul>
+    </div>
+    <div>
+        <p>Note: Blocked accounts cannot be used for payments</p> 
+        <p>Update status of blocked account to active by adding 0 amount of equivalent currency of account using Add Funds</p>
+    </div>
+    
+{% endblock %}

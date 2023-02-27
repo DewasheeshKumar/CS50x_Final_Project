@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Add
+{% endblock %}
+
+{% block main %}
+    <form action="/payment" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="title" placeholder="Used for" type="text">
+        </div>
+        <div>
+            <p>
+                **Payments done in same currency as bank
+            </p>
+        </div>        
+        <div class="form-group">
+            <input class="form-control" name="amount" placeholder="Amount">
+        </div>
+        <div class="form-group">
+            <select class="form-control" name="bank">
+                    <option value="none" selected disabled hidden>Account Used</option>
+                {% for rows in available_accounts %}
+                    <option value = "{{ rows.bank }}">{{ rows.bank }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <button class="btn btn-primary" type="submit">Add</button>
+    </form>
+{% endblock %}
