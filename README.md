@@ -1,6 +1,6 @@
 # myLedger
 
-#### Made by [Chittesh1999](https://github.com/Chittesh1999)
+#### Made by [dewasheeshkumar](https://github.com/dewasheeshkumar)
 
 #### Video Demo: https://youtu.be/x36GepEcecs
 
